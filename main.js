@@ -80,16 +80,21 @@ window.editProduct = async (id) => {
   try {
     const res = await fetch(`${API_URL}/${id}`);
     const p = await res.json();
+
     form.productId.value = p.id;
     form.name.value = p.name;
     form.color.value = p.color;
     form.year.value = p.year;
     form.price.value = p.price;
     form.image.value = p.image;
+
+    // 👇 Viewportni formga ko‘tarish
+    form.scrollIntoView({ behavior: "smooth" });
   } catch (error) {
     console.error("Tahrirlashda xatolik:", error);
   }
 };
+
 
 // O‘chirish
 window.deleteProduct = async (id) => {
@@ -104,3 +109,4 @@ window.deleteProduct = async (id) => {
 };
 
 loadProducts();
+
