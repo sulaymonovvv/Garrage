@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Panel</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="container py-4">
+    <h1 class="mb-4">Mashinalar</h1>
+
+    <form id="productForm" class="row g-3">
+      <input type="hidden" id="productId" />
+      <div class="col-md-6">
+        <label class="form-label">Nomi</label>
+        <input type="text" id="name" class="form-control" required />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Rangi</label>
+        <input type="text" id="color" class="form-control" />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Chiqarilgan yili</label>
+        <input type="number" id="year" class="form-control" />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Narxi</label>
+        <input type="number" id="price" class="form-control" />
+      </div>
+      <div class="col-md-12">
+        <label class="form-label">Rasm URL</label>
+        <input type="url" id="image" class="form-control" />
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Saqlash</button>
+      </div>
+    </form>
+
+    <hr class="my-4" />
+
+    <h2>Mashinalar</h2>
+    <div id="productList" class="row"></div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
